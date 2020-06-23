@@ -1,9 +1,0 @@
-test:
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: 'root'
-  port: 3306
-  host: db
-  database: app_test #database.ymlのテスト環境のデータベース名を参照
-
