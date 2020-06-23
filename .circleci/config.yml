@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    machine:
+      image: circleci/classic:edge
+    steps:
+      - checkout
+      - run:
+          name: docker-compose build
+          command: docker-compose build
+      - run:
+          name: bundle install
+          command: docker-compose run rails_mp bundle install
+      - run:
+          name: setup db
+          command: docker-compose run rails_mp rails db:create db:migrate
+      - run:
+          name: seed db
+          command: docker-compose run rails_mp rails db:seed_fu
+      - run:
+          name: docker-compose up
+          command: docker-compose up -d
+      - run:
+          name: rubocop
+          command: docker-compose run rails_mp rubocop
+      - run:
+          name: rspec
+          command: docker-compose run rails_mp rspec
+      - run:
+          name: docker-compose down
+          command: docker-compose down
