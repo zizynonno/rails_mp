@@ -10,22 +10,22 @@ jobs:
           command: docker-compose build
       - run:
           name: bundle install
-          command: docker-compose run rails_mp bundle install
+          command: docker-compose run . bundle install
       - run:
           name: setup db
-          command: docker-compose run rails_mp rails db:create db:migrate
+          command: docker-compose run . rails db:create db:migrate
       - run:
           name: seed db
-          command: docker-compose run rails_mp rails db:seed_fu
+          command: docker-compose run . rails db:seed_fu
       - run:
           name: docker-compose up
           command: docker-compose up -d
       - run:
           name: rubocop
-          command: docker-compose run rails_mp rubocop
+          command: docker-compose run . rubocop
       - run:
           name: rspec
-          command: docker-compose run rails_mp rspec
+          command: docker-compose run . rspec
       - run:
           name: docker-compose down
           command: docker-compose down
