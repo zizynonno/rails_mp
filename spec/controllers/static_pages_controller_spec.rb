@@ -24,3 +24,17 @@ RSpec.describe StaticPagesController, type: :controller do
   end
 
 end
+
+RSpec.feature 'タイトル' do
+  background do
+    @base_title = 'Rails_MP'
+  end
+  scenario 'タイトル' do
+    visit '/static_pages/home'
+    expect(page).to have_title "Home | #{@base_title}"
+    visit '/static_pages/help'
+    expect(page).to have_title("Help | #{@base_title}", exact: true)
+    visit '/static_pages/about'
+    expect(page).to have_title("About | Rails_MP", exact: true)
+  end
+end
