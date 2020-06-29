@@ -23,6 +23,13 @@ RSpec.describe StaticPagesController, type: :controller do
     end
   end
 
+  describe "GET #contact" do
+    it "return http success" do
+      get :contact
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end
 
 RSpec.feature 'タイトル' do
@@ -30,11 +37,13 @@ RSpec.feature 'タイトル' do
     @base_title = 'Rails_MP'
   end
   scenario 'タイトル' do
-    visit '/static_pages/home'
+    visit root_path
     expect(page).to have_title "#{@base_title}"
-    visit '/static_pages/help'
+    visit help_path
     expect(page).to have_title("Help | #{@base_title}", exact: true)
-    visit '/static_pages/about'
+    visit about_path
     expect(page).to have_title("About | Rails_MP", exact: true)
+    visit contact_path
+    expect(page).to have_title("Contact | Rails_MP", exact: true)
   end
 end
