@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'unicorn'
 gem 'bootstrap-sass', '3.3.7'
+gem 'bcrypt',         '3.1.12'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
