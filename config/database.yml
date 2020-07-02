@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: rails_mp_db_1
+  database: app_production
   username: app
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
