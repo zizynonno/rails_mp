@@ -10,7 +10,7 @@ Rails+RSpec+Nginx+Unicorn+Docker
 
 フレームワーク:Rails,Bootstrap
 
-ミドルウェア:MySQL,docker,Unicorn
+ミドルウェア:MySQL,docker,Nginx,Unicorn
 
 クラウド:Heroku
 
