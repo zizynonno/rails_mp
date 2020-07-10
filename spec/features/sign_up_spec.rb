@@ -11,7 +11,5 @@ RSpec.feature 'Sign up' do
     fill_in "Password", with: 'test'
     fill_in "Confirmation", with: 'test'
     click_on 'Create my account'
-
-    # expect(page).to have_content "アカウント登録が完了しました。"
   end
 end
