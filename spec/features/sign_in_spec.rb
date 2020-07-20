@@ -41,3 +41,12 @@ feature 'Sign out' do
     expect(page).to have_current_path root_path
   end
 end
+
+# feature 'sign in remember' do
+#   scenario "ログイン成功(remember me)" do
+#     user = create(:user) #FactoryBot
+#     visit root_path
+#     log_in_as(user, remember_me: '1')
+#     # expect(cookies['remember_token']).not_to be_empty
+#   end
+# end
