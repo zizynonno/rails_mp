@@ -10,6 +10,6 @@ RSpec.feature 'Sign up' do
     fill_in "Email", with: 'foo@example.com'
     fill_in "Password", with: 'test'
     fill_in "Confirmation", with: 'test'
-    click_on 'Create my account' 
+    click_on 'Create my account'
   end
 end
