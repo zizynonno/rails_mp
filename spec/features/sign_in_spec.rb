@@ -7,7 +7,7 @@ feature 'Sign in' do
     expect(page).to have_http_status :ok
 
     click_link "Log in"
-    fill_in "Email", with: 'TEST1@example.com'
+    fill_in "Email", with: user.email
     fill_in "Password", with: 'foobar'
     click_button "Log in"
     expect(page).to have_selector 'h1', text: user.name
@@ -30,7 +30,7 @@ feature 'Sign out' do
     user = create(:user) #FactoryBot
     visit root_path
     click_link "Log in"
-    fill_in "Email", with: 'TEST2@example.com'
+    fill_in "Email", with: user.email
     fill_in "Password", with: 'foobar'
     click_button "Log in"
     expect(page).to have_selector 'h1', text: user.name
