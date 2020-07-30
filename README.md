@@ -1,4 +1,4 @@
-面白そうなので、勉強がてらRailsTutorialを
+面白そうなので、勉強がてら RailsTutorial を
 
 Rails+RSpec+Nginx+Unicorn+Docker
 
@@ -25,3 +25,7 @@ docker-compose build
 docker-compose run rails db:create
 
 docker-compose up
+
+### デプロイしてる URL
+
+https://stormy-stream-50795.herokuapp.com/
