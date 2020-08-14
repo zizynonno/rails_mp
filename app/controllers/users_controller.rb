@@ -35,7 +35,7 @@ class UsersController < ApplicationController
       @q = Micropost.none.ransack
       @microposts = @user.microposts.paginate(page: params[:page])
     end
-    @url = user_path(@user) 
+    @url = user_path(@user)
   end
 
   def new
