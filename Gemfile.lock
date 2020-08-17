@@ -45,6 +45,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    after_commit_action (1.1.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
     aliyun-sdk (0.7.3)
       nokogiri (~> 1.6)
       rest-client (~> 2.0)
@@ -89,6 +92,10 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
+    counter_culture (1.12.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      after_commit_action (~> 1.0)
     crass (1.0.6)
     diff-lcs (1.4.4)
     domain_name (0.5.20190701)
@@ -462,6 +469,7 @@ DEPENDENCIES
   carrierwave (= 1.2.2)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  counter_culture (~> 1.8)
   factory_bot_rails
   faker (= 1.7.3)
   fog (= 1.42)

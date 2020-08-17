@@ -45,6 +45,7 @@ gem 'mini_magick',             '4.7.0'
 gem 'ransack'
 gem 'pry-rails'
 gem 'pry-byebug'
+gem 'counter_culture', '~> 1.8'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
