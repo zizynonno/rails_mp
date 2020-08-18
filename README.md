@@ -22,6 +22,8 @@ Rails+RSpec+Nginx+Unicorn+Docker
 
 CRUD 機能
 ログインログアウト機能
+Remember me 機能
+画像アップロード機能
 フォローフォロワー機能
 検索機能
 いいね機能
