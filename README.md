@@ -20,13 +20,24 @@ Rails+RSpec+Nginx+Unicorn+Docker
 
 ### 機能
 
+#### RailsTutorial の 1~14 章の内容
+
 CRUD 機能
+
 ログインログアウト機能
+
 Remember me 機能
+
 画像アップロード機能
+
 フォローフォロワー機能
+
+#### RailsTutorial を改造
+
 検索機能
+
 いいね機能
+
 ユーザー ID 機能
 
 ### 起動
