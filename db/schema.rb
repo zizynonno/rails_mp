@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_020254) do
+ActiveRecord::Schema.define(version: 2020_08_17_121538) do
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -51,7 +51,9 @@ ActiveRecord::Schema.define(version: 2020_08_17_020254) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "microposts", "users"

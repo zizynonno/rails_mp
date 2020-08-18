@@ -20,12 +20,12 @@ class UsersController < ApplicationController
   end
 
   # def show
-  #   @user = User.find(params[:id])
+  #   @user = User.friendly.find(params[:id])
   #   @microposts = @user.microposts.paginate(page: params[:page])
   # end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
     # @microposts = @user.microposts.paginate(page: params[:page])
     # redirect_to root_url and return unless @user.activated?
     if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
@@ -54,11 +54,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -68,21 +68,21 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
+    User.friendly.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
   end
 
   def following
     @title = "Following"
-    @user  = User.find(params[:id])
+    @user  = User.friendly.find(params[:id])
     @users = @user.following.paginate(page: params[:page])
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
-    @user  = User.find(params[:id])
+    @user  = User.friendly.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
@@ -98,7 +98,7 @@ class UsersController < ApplicationController
 
     # 正しいユーザーかどうか確認
     def correct_user
-      @user = User.find(params[:id])
+      @user = User.friendly.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 
