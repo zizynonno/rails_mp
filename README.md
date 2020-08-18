@@ -18,6 +18,15 @@ Rails+RSpec+Nginx+Unicorn+Docker
 
 その他：GitHub,CircleCI
 
+### 機能
+
+CRUD 機能
+ログインログアウト機能
+フォローフォロワー機能
+検索機能
+いいね機能
+ユーザー ID 機能
+
 ### 起動
 
 docker-compose build
