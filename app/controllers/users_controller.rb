@@ -28,12 +28,13 @@ class UsersController < ApplicationController
     @user = User.friendly.find(params[:id])
     # @microposts = @user.microposts.paginate(page: params[:page])
     # redirect_to root_url and return unless @user.activated?
+    @micropost = current_user.microposts.build
     if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
       @q = @user.microposts.ransack(microposts_search_params)
-      @microposts = @q.result.paginate(page: params[:page])
+      @feed_items = @q.result.paginate(page: params[:page])
     else
       @q = Micropost.none.ransack
-      @microposts = @user.microposts.paginate(page: params[:page])
+      @feed_items = @user.microposts.paginate(page: params[:page])
     end
     @url = user_path(@user)
   end
