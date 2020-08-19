@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_121538) do
+ActiveRecord::Schema.define(version: 2020_08_19_143754) do
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_121538) do
     t.datetime "updated_at", null: false
     t.string "picture"
     t.integer "likes_count", default: 0, null: false
+    t.integer "in_reply_to", default: 0
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end

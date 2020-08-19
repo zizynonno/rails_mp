@@ -47,6 +47,7 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'counter_culture', '~> 1.8'
 gem 'friendly_id'
+gem 'font-awesome-sass', '~> 5.4.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
