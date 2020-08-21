@@ -7,7 +7,7 @@ https://stormy-stream-50795.herokuapp.com/
 面白そうなので、勉強がてら RailsTutorial を Rails+RSpec+Nginx+Unicorn+Docker で改造してみた。
 
 - Rails チュートリアルのサンプルを拡張したアプリです。
-- オリジナルの機能に加え、docker や CircleCI の導入、RSpec の導入、キーワード検索機能、返信機能、いいね機能を追加し、変更を加えました。
+- オリジナルの機能に加え、docker や CircleCI の導入、RSpec の導入、キーワード検索機能、返信機能、いいね機能を追加しました。
 
 ### 開発環境
 
