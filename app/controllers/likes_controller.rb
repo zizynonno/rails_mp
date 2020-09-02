@@ -20,7 +20,7 @@ class LikesController < ApplicationController
       @micropost.reload
       respond_to do |format|
         format.html { redirect_to request.referrer || root_url }
-        format.js
+        format.js 
       end
     end
   end
